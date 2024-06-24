@@ -8,7 +8,8 @@ function product(nums) {
 /** longest: return the length of the longest word in an array of words. */
 
 function longest(words) {
-
+  if (words.length === 1) return words[0].length;
+  return Math.max(words[0].length, longest(words.slice(1)));
 }
 
 /** everyOther: return a string with every other letter. */
